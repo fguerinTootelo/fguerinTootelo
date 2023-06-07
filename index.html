@@ -4,6 +4,20 @@
     <title>Page avec bouton</title>
 </head>
 <body>
-<script id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="931cb2aa-a424-490a-8ce6-cd7ad4422c73" data-lcw-version="prod" data-org-id="15db3b7c-d904-ee11-a66b-0022483d7af3" data-org-url="https://unq15db3b7cd904ee11a66b0022483d7-crm3.omnichannelengagementhub.com"></script>
+    <button id="launchButton">Lancer le script</button>
+
+    <script>
+        document.getElementById("launchButton").addEventListener("click", function() {
+            var scriptElement = document.createElement("script");
+            scriptElement.id = "Microsoft_Omnichannel_LCWidget";
+            scriptElement.src = "https://oc-cdn-public.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js";
+            scriptElement.setAttribute("data-app-id", "931cb2aa-a424-490a-8ce6-cd7ad4422c73");
+            scriptElement.setAttribute("data-lcw-version", "prod");
+            scriptElement.setAttribute("data-org-id", "15db3b7c-d904-ee11-a66b-0022483d7af3");
+            scriptElement.setAttribute("data-org-url", "https://unq15db3b7cd904ee11a66b0022483d7-crm3.omnichannelengagementhub.com");
+
+            document.head.appendChild(scriptElement);
+        });
+    </script>
 </body>
 </html>
