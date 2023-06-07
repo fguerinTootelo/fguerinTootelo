@@ -4,10 +4,10 @@
     <title>Page avec bouton</title>
 </head>
 <body>
-    <button id="launchButton">Lancer le script</button>
+    <button onclick="launchScript()">Lancer le script</button>
 
     <script>
-        document.getElementById("launchButton").addEventListener("click", function() {
+        function launchScript() {
             var scriptElement = document.createElement("script");
             scriptElement.id = "Microsoft_Omnichannel_LCWidget";
             scriptElement.src = "https://oc-cdn-public.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js";
@@ -16,8 +16,9 @@
             scriptElement.setAttribute("data-org-id", "15db3b7c-d904-ee11-a66b-0022483d7af3");
             scriptElement.setAttribute("data-org-url", "https://unq15db3b7cd904ee11a66b0022483d7-crm3.omnichannelengagementhub.com");
 
-            document.head.appendChild(scriptElement);
-        });
+           
+        }
     </script>
+    
 </body>
 </html>
